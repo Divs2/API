@@ -1,0 +1,155 @@
+{
+	"id": "556e5727-4667-4857-9f3c-932b66916a90",
+	"name": "IC_2021",
+	"timestamp": "2021-07-17T10:46:35.247Z",
+	"collection_id": "16635540-a4bded9d-284e-44e3-a68b-1a93bc8f0a03",
+	"folder_id": 0,
+	"environment_id": "d269389e-846a-4f55-926f-00180021a0be",
+	"totalPass": 3,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "bff19005-8aac-4146-99a5-474cfde30351",
+			"name": "New Request",
+			"url": "http://localhost:8080/BillingOrder",
+			"time": 164,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				164
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "773259ce-956c-4bc6-9f91-cfd6b943eab4",
+			"name": "Get records",
+			"url": "http://localhost:8080/BillingOrder/19",
+			"time": 19,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"checking data": true
+			},
+			"testPassFailCounts": {
+				"checking data": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				19
+			],
+			"allTests": [
+				{
+					"checking data": true
+				}
+			]
+		},
+		{
+			"id": "f7199e06-373d-45bd-8cc2-d872acdab765",
+			"name": "update records",
+			"url": "http://localhost:8080/BillingOrder/19",
+			"time": 14,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				14
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "bd859065-b9e8-4312-ae89-0b075c0ae53b",
+			"name": "get updated records",
+			"url": "http://localhost:8080/BillingOrder/19",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"checking data": true
+			},
+			"testPassFailCounts": {
+				"checking data": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"checking data": true
+				}
+			]
+		},
+		{
+			"id": "62a0a2fc-1306-446e-b098-80acc12a24ef",
+			"name": "Delete records",
+			"url": "http://localhost:8080/BillingOrder/19",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status code is 200": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 215,
+	"collection": {
+		"requests": [
+			{
+				"id": "bff19005-8aac-4146-99a5-474cfde30351",
+				"method": "POST"
+			},
+			{
+				"id": "773259ce-956c-4bc6-9f91-cfd6b943eab4",
+				"method": "GET"
+			},
+			{
+				"id": "f7199e06-373d-45bd-8cc2-d872acdab765",
+				"method": "PUT"
+			},
+			{
+				"id": "bd859065-b9e8-4312-ae89-0b075c0ae53b",
+				"method": "GET"
+			},
+			{
+				"id": "62a0a2fc-1306-446e-b098-80acc12a24ef",
+				"method": "DELETE"
+			}
+		]
+	}
+}
