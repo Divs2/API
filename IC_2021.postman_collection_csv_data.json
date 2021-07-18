@@ -1,0 +1,107 @@
+{
+	"info": {
+		"_postman_id": "a4bded9d-284e-44e3-a68b-1a93bc8f0a03",
+		"name": "IC_2021",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create records",
+			"item": [
+				{
+					"name": "post billing records",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"\r",
+									" \r",
+									"    var jsonData = pm.response.json();\r",
+									"    console.log(jsonData.firstName);\r",
+									"    console.log(jsonData.id);\r",
+									"pm.environment.set(\"id\", jsonData.id);\r",
+									"pm.environment.set(\"fname\", jsonData.firstName);\r",
+									"pm.environment.set(\"lname\", jsonData.lastName);\r",
+									"pm.environment.set(\"city\", jsonData.city);\r",
+									"pm.environment.set(\"phone\", jsonData.phone);"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"firstName\": \"{{firstname}}\",\r\n     \"lastName\": \"{{lastname}}\",\r\n  \"addressLine1\": \"{{addressline1}}\",\r\n  \"addressLine2\": \"{{addresline2}}\",\r\n  \"city\": \"{{city}}\",\r\n  \"comment\": \"{{comment}}\",\r\n  \"email\": \"{{email}}\",\r\n  \"itemNumber\": \"{{itemnumber}}\",\r\n \"phone\": \"{{phone}}\",\r\n  \"state\": \"{{state}}\",\r\n  \"zipCode\": \"{{zipcode}}\"\r\n}"
+						},
+						"url": {
+							"raw": "{{url}}:{{port}}/BillingOrder",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"BillingOrder"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get records",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"checking data\", function () {\r",
+									"    var jsonData = pm.response.json();\r",
+									"    \r",
+									"    pm.expect(jsonData.firstName).to.eql( pm.environment.get(\"fname\"));\r",
+									"    pm.expect(jsonData.lastName).to.eql( pm.environment.get(\"lname\"));\r",
+									"    pm.expect(jsonData.city).to.eql( pm.environment.get(\"city\"));\r",
+									"    pm.expect(jsonData.phone).to.eql( pm.environment.get(\"phone\"));\r",
+									"    \r",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": ""
+						},
+						"url": {
+							"raw": "{{url}}:{{port}}/BillingOrder/{{id}}",
+							"host": [
+								"{{url}}"
+							],
+							"port": "{{port}}",
+							"path": [
+								"BillingOrder",
+								"{{id}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

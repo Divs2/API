@@ -1,0 +1,154 @@
+newman
+
+IC_2021
+
+Iteration 1/10
+
+□ create records
+└ post billing records
+  POST http://localhost:8080/BillingOrder [200 OK, 389B, 194ms]
+  ┌
+  │ 'Divya1'
+  │ 78
+  └
+
+└ Get records
+  GET http://localhost:8080/BillingOrder/78 [200 OK, 389B, 44ms]
+  √  checking data
+
+Iteration 2/10
+
+└ post billing records
+  POST http://localhost:8080/BillingOrder [200 OK, 389B, 13ms]
+  ┌
+  │ 'Divya2'
+  │ 79
+  └
+
+└ Get records
+  GET http://localhost:8080/BillingOrder/79 [200 OK, 389B, 14ms]
+  √  checking data
+
+Iteration 3/10
+
+└ post billing records
+  POST http://localhost:8080/BillingOrder [200 OK, 389B, 23ms]
+  ┌
+  │ 'Divya3'
+  │ 80
+  └
+
+└ Get records
+  GET http://localhost:8080/BillingOrder/80 [200 OK, 389B, 17ms]
+  √  checking data
+
+Iteration 4/10
+
+└ post billing records
+  POST http://localhost:8080/BillingOrder [200 OK, 389B, 17ms]
+  ┌
+  │ 'Divya4'
+  │ 81
+  └
+
+└ Get records
+  GET http://localhost:8080/BillingOrder/81 [200 OK, 389B, 29ms]
+  √  checking data
+
+Iteration 5/10
+
+└ post billing records
+  POST http://localhost:8080/BillingOrder [200 OK, 389B, 22ms]
+  ┌
+  │ 'Divya5'
+  │ 82
+  └
+
+└ Get records
+  GET http://localhost:8080/BillingOrder/82 [200 OK, 389B, 34ms]
+  √  checking data
+
+Iteration 6/10
+
+└ post billing records
+  POST http://localhost:8080/BillingOrder [200 OK, 389B, 8ms]
+  ┌
+  │ 'Divya6'
+  │ 83
+  └
+
+└ Get records
+  GET http://localhost:8080/BillingOrder/83 [200 OK, 389B, 21ms]
+  √  checking data
+
+Iteration 7/10
+
+└ post billing records
+  POST http://localhost:8080/BillingOrder [200 OK, 389B, 11ms]
+  ┌
+  │ 'Divya7'
+  │ 84
+  └
+
+└ Get records
+  GET http://localhost:8080/BillingOrder/84 [200 OK, 389B, 11ms]
+  √  checking data
+
+Iteration 8/10
+
+└ post billing records
+  POST http://localhost:8080/BillingOrder [200 OK, 389B, 9ms]
+  ┌
+  │ 'Divya8'
+  │ 85
+  └
+
+└ Get records
+  GET http://localhost:8080/BillingOrder/85 [200 OK, 389B, 22ms]
+  √  checking data
+
+Iteration 9/10
+
+└ post billing records
+  POST http://localhost:8080/BillingOrder [200 OK, 389B, 10ms]
+  ┌
+  │ 'Divya9'
+  │ 86
+  └
+
+└ Get records
+  GET http://localhost:8080/BillingOrder/86 [200 OK, 389B, 14ms]
+  √  checking data
+
+Iteration 10/10
+
+└ post billing records
+  POST http://localhost:8080/BillingOrder [200 OK, 392B, 18ms]
+  ┌
+  │ 'Divya10'
+  │ 87
+  └
+
+└ Get records
+  GET http://localhost:8080/BillingOrder/87 [200 OK, 392B, 13ms]
+  √  checking data
+
+┌─────────────────────────┬───────────────────┬──────────────────┐
+│                         │          executed │           failed │
+├─────────────────────────┼───────────────────┼──────────────────┤
+│              iterations │                10 │                0 │
+├─────────────────────────┼───────────────────┼──────────────────┤
+│                requests │                20 │                0 │
+├─────────────────────────┼───────────────────┼──────────────────┤
+│            test-scripts │                20 │                0 │
+├─────────────────────────┼───────────────────┼──────────────────┤
+│      prerequest-scripts │                 0 │                0 │
+├─────────────────────────┼───────────────────┼──────────────────┤
+│              assertions │                10 │                0 │
+├─────────────────────────┴───────────────────┴──────────────────┤
+│ total run duration: 2.3s                                       │
+├────────────────────────────────────────────────────────────────┤
+│ total data received: 5.06KB (approx)                           │
+├────────────────────────────────────────────────────────────────┤
+│ average response time: 27ms [min: 8ms, max: 194ms, s.d.: 39ms] │
+└────────────────────────────────────────────────────────────────┘

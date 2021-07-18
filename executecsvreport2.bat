@@ -1,0 +1,1 @@
+newman run IC_2021.postman_collection_csv_data.json -e  IC_2021.postman_environment.json -d data.csv -r cli,html-- reporter-html-template templates/htmlreqres.hbs--reporter-html-export report/report.html

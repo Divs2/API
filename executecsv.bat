@@ -1,0 +1,1 @@
+newman run IC_2021.json -e IC_2021.postman_environment.json
